@@ -1,6 +1,6 @@
 use std::io::{self, BufRead};
 
-fn main() -> io::Result<()> {
+pub fn run() -> io::Result<()> {
     let stdin = io::stdin();
     let mut buff = String::new();
 

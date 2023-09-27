@@ -21,10 +21,10 @@ fn make_elf_pair(input: &str) -> Vec<Elf> {
         .collect()
 }
 
-fn fully_contain(elf_one: &Elf, elf_two: &Elf) -> bool {
-    (elf_one.start <= elf_two.start && elf_one.end >= elf_two.end)
-        || (elf_two.start <= elf_one.start && elf_two.end >= elf_one.end)
-}
+// fn fully_contain(elf_one: &Elf, elf_two: &Elf) -> bool {
+//     (elf_one.start <= elf_two.start && elf_one.end >= elf_two.end)
+//         || (elf_two.start <= elf_one.start && elf_two.end >= elf_one.end)
+// }
 
 fn overlap(elf_one: &Elf, elf_two: &Elf) -> bool {
     (elf_one.start <= elf_two.start && elf_one.end >= elf_two.start)
@@ -42,7 +42,7 @@ fn read_lines() -> io::Result<Vec<String>> {
     Ok(lines)
 }
 
-fn main() -> io::Result<()> {
+pub fn run() -> io::Result<()> {
     let buff = read_lines()?;
 
     let contained = buff

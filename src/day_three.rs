@@ -30,7 +30,7 @@ fn read_lines() -> io::Result<Vec<Vec<String>>> {
     Ok(lines)
 }
 
-fn main() -> io::Result<()> {
+pub fn run() -> io::Result<()> {
     let lines = read_lines()?;
 
     println!(

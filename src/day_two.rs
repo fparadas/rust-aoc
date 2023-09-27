@@ -105,7 +105,7 @@ fn read_lines() -> io::Result<String> {
     Ok(buff)
 }
 
-fn main() -> io::Result<()> {
+pub fn run() -> io::Result<()> {
     let buff = read_lines()?;
 
     let total_score = parse(&buff)
