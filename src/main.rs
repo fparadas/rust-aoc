@@ -1,9 +1,6 @@
+mod days;
+
 extern crate clap;
-mod day_five;
-mod day_four;
-mod day_one;
-mod day_three;
-mod day_two;
 
 use clap::Parser;
 use std::io;
@@ -23,11 +20,12 @@ fn main() -> io::Result<()> {
     let cli = CLI::parse();
 
     match cli.day {
-        1 => day_one::run()?,
-        2 => day_two::run()?,
-        3 => day_three::run()?,
-        4 => day_four::run()?,
-        5 => day_five::run(cli.part.unwrap_or(1))?,
+        1 => days::day_one::run()?,
+        2 => days::day_two::run()?,
+        3 => days::day_three::run()?,
+        4 => days::day_four::run()?,
+        5 => days::day_five::run(cli.part.unwrap_or(1))?,
+        6 => days::day_six::run()?,
         _ => println!("Day not implemented"),
     }
 
