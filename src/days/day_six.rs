@@ -19,7 +19,7 @@ pub fn run() -> io::Result<()> {
 
             char_set.extend(char_vec.iter());
         }
-        if char_vec.len() == 4 {
+        if char_vec.len() == 14 {
             println!("Marker at: {}", index + 1);
             break;
         }
